@@ -1,6 +1,7 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
+// #region Icons
 import musicIconURL from './music/music.png';
 import musicInsetIconURL from './music/music-small.svg';
 
@@ -46,6 +47,10 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import iotTPLBlocksIconURL from './iotTPLBlocks/iotTPLBlocks.png';
+import iotTPLBlocksSmallIconURL from './iotTPLBlocks/iotTPLBlocks-small.png';
+// #endregion
+
 export default [
     {
         name: (
@@ -63,6 +68,27 @@ export default [
                 defaultMessage="Play instruments and drums."
                 description="Description for the 'Music' extension"
                 id="gui.extension.music.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="IoT BLocks"
+                description="Name for the 'IoT BLocks' extension"
+                id="gui.extension.iotTPLBlocks.name"
+            />
+        ),
+        extensionId: 'iotTPLBlocks',
+        iconURL: iotTPLBlocksIconURL,
+        insetIconURL: iotTPLBlocksSmallIconURL,
+        internetConnectionRequired: true,
+        description: (
+            <FormattedMessage
+                defaultMessage="Interface with IoT devices."
+                description="Description for the 'Iot Blocks' extension"
+                id="gui.extension.iotTPLBlocks.description"
             />
         ),
         featured: true
